@@ -1,7 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+    body{
+        font-family: 'Varela Round', sans-serif;
+        margin: auto;
+        color: #f4deea;
+        background: rgba(0, 178, 169, 0.19);
+    }
+    header{
+        color: #007ac9;
+        margin-left: 2%;
+    }
+
+    #pysäkkiaikataulu{
+        display: flex;
+        flex-direction: row;
+        color: #141414;
+    }
+    #linjanumero{
+        width: 45px;
+        text-align: center;
+    }
+    #määränpää{
+    }
+    #lähtöaika{
+        width: 70px;
+    }
+    #kello{
+        overflow: hidden;
+        background: #007ac9;
+        width: 145px;
+        color: #bee4f8;
+        border-radius: 10px;
+        margin-left: 2%;
+    }
+
+    #aikataulu{
+        padding: 5px;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 145px;
+    }
+
+    .sticky + #aikataulu {
+        padding-top: 55px;
+    }
+
+    .hidden{
+        display: none;
+    }
+    a:link, a:visited {
+        text-decoration: none;
+        background-color: #00b2a9;
+        color: #eeeeee;
+        width:160px;
+        text-align:center;
+        padding:0 2px;
+        border-radius: 5px;
+    }
+    a:hover {
+        background-color: #64be14;
+    }
+    #ratikka {
+        display: flex;
+        flex-direction: row;
+        background: #00985f;
+        border-radius: 10px;
+        padding: 2px 0;
+    }
+    #bussi {
+        display: flex;
+        flex-direction: row;
+        background: #007ac9;
+        border-radius: 10px;
+        padding: 2px 0;
+    }
+    #juna {
+        display: flex;
+        flex-direction: row;
+        background: #8c4799;
+        border-radius: 10px;
+        padding: 2px 0;
+    }
+    #metro {
+        display: flex;
+        flex-direction: row;
+        background: #ff6319;
+        border-radius: 10px;
+        padding: 2px 0;
+    }
+    #lautta {
+        display: flex;
+        flex-direction: row;
+        background: #00b9e4;
+        border-radius: 10px;
+        padding: 2px 0;
+    }
+    #pysäkinNimi{
+        padding: 10px 0;
+    }
+</style>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="60">
     <title>Kevytversio</title>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 </head>
@@ -10,9 +120,9 @@
     <h1>Kevytversio</h1>
 </header>
 
-<button id="hakunappi">HAE!</button>
 <h1 id="kello"></h1>
-<h3 id="tulostus"></h3>
+<div id="aikataulu"></div>
+<button class="hidden" id="hakunappi">HAE!</button>
 <script src="kevytversio.js"></script>
 
 </body>
